@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:crm_center_admin_charts/ApiConst.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -37,7 +38,7 @@ class _KunlikTashrifState extends State<KunlikTashrif> {
     }
 
     final response = await http.get(
-      Uri.parse('https://crm-center.atko.tech/api/admin/tashrif'),
+      Uri.parse('${ApiConst.apiUrl}/admin/tashrif'),
       headers: {
         'Authorization': 'Bearer $_token',
         'Accept': 'application/json',

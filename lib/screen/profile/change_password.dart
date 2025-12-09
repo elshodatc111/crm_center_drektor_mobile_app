@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:crm_center_admin_charts/ApiConst.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:http/http.dart' as http;
@@ -32,7 +33,7 @@ class _ChangePasswordState extends State<ChangePassword> {
 
     try {
       final response = await http.post(
-        Uri.parse('https://crm-center.atko.tech/api/admin/change/password'),
+        Uri.parse('${ApiConst.apiUrl}/admin/change/password'),
         headers: {
           'Authorization': 'Bearer $token',
           'Accept': 'application/json',

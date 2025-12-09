@@ -1,3 +1,4 @@
+import 'package:crm_center_admin_charts/ApiConst.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:http/http.dart' as http;
@@ -21,7 +22,7 @@ class _DebetUsersState extends State<DebetUsers> {
 
     try {
       final response = await http.get(
-        Uri.parse("https://crm-center.atko.tech/api/admin/debet"),
+        Uri.parse("${ApiConst.apiUrl}/admin/debet"),
         headers: {"Authorization": "Bearer $token"},
       );
 

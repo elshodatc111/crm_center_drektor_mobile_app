@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:crm_center_admin_charts/ApiConst.dart';
 import 'package:crm_center_admin_charts/screen/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
@@ -26,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
 
     try {
       final response = await http.post(
-        Uri.parse('https://crm-center.atko.tech/api/admin/login'),
+        Uri.parse('${ApiConst.apiUrl}/admin/login'),
         body: {
           'email': _loginController.text.trim(),
           'password': _passwordController.text,

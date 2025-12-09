@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:crm_center_admin_charts/ApiConst.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:intl/intl.dart';
@@ -39,7 +40,7 @@ class _ActiveUserState extends State<ActiveUser> {
     }
 
     final response = await http.get(
-      Uri.parse('https://crm-center.atko.tech/api/admin/active'),
+      Uri.parse('${ApiConst.apiUrl}/admin/active'),
       headers: {
         'Authorization': 'Bearer $_token',
         'Accept': 'application/json',

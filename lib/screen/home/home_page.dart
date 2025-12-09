@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:crm_center_admin_charts/ApiConst.dart';
 import 'package:crm_center_admin_charts/screen/home/widget/aktiv_tashrif_widget.dart';
 import 'package:crm_center_admin_charts/screen/home/widget/balansWidget.dart';
 import 'package:crm_center_admin_charts/screen/home/widget/chart_widget.dart';
@@ -44,7 +45,7 @@ class _HomePageState extends State<HomePage> {
       return;
     }
     final response = await http.get(
-      Uri.parse('https://crm-center.atko.tech/api/admin/home'),
+      Uri.parse('${ApiConst.apiUrl}/admin/home'),
       headers: {
         'Authorization': 'Bearer $_token',
         'Accept': 'application/json',
