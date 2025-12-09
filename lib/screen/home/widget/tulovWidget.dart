@@ -153,7 +153,7 @@ class Tulovwidget extends StatelessWidget {
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
+          Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(name, style: TextStyle(fontWeight: FontWeight.w600)),

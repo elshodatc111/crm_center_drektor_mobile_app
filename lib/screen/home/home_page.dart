@@ -51,9 +51,10 @@ class _HomePageState extends State<HomePage> {
         'Accept': 'application/json',
       },
     );
-
+    print(response.statusCode);
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
+      //print(data);
       setState(() {
         _homeData = data;
         _isLoading = false;
@@ -146,6 +147,7 @@ class _HomePageState extends State<HomePage> {
                           AktivTashrifWidget(
                             count: _homeData['active_count'] ?? 0,
                           ),
+                          /*
                           DarsjadvalWidget(
                             count: _homeData['jadval']['count'] ?? 0,
                             data: _homeData['jadval']['data'] ?? 0,
@@ -153,6 +155,8 @@ class _HomePageState extends State<HomePage> {
                               _homeData['jadval']['jadval'] ?? [],
                             ),
                           ),
+
+                           */
                           //ChartWidget(),
                         ],
                       ),

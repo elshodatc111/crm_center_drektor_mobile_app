@@ -27,7 +27,7 @@ class _SplashPageState extends State<SplashPage> {
       // Token bor bo‘lsa — HomePage
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => const HomePage()),
+        MaterialPageRoute(builder: (_) => HomePage()),
       );
     } else {
       // Token yo‘q — LoginPage
